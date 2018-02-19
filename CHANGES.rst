@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.dev0 (unreleased)
+0.2 (2018-02-19)
 ----------------
 
 - Bad release.
