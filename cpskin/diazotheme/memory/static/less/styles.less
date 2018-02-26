@@ -122,6 +122,9 @@ a.btn-search {
 .LSBox input[type="text"]{
     background: #fff;
 }
+[id="logo-mobile"]{
+    display: none;
+}
 //Search in homepage
 .main-homepage #portal-searchbox {
     float: none;
@@ -160,7 +163,6 @@ a.btn-search {
     color: @font-white;
 }
 #breadcrumbs-current {
-    /*color: #bed4eb;*/
     color: @theme-blue;
 }
 //NAVIGATION
@@ -645,9 +647,9 @@ ul.navTreeLevel0{
     background: #1F313F;
     content: "";
     display: block;
-    margin: 0 0 0 -50%;
+    margin: -6.9% 0 0 -50%;
     position: absolute;
-    top:-30.2%;
+    top:0;
     height: 200%;
     width: 200%;
     z-index: -1;
@@ -757,6 +759,7 @@ ul.navTreeLevel0{
 }
 #footer-sitemap div.footer-static{
     display: flex;
+    flex-wrap: wrap;
     float: none;
     max-width: 50%;
     padding: 0;
