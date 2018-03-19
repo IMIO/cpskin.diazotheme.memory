@@ -49,14 +49,17 @@ h2{
 }
 #portal-personaltools dd{
     background: @theme-bg-header;
+    box-shadow: 3px 5px 12px 2px #b7b7b7;
 }
 #top-actions #portal-personaltools a {
     color: #cb0034;
 }
 #top-banner-search {
-    margin: -11em 0 0 0;
-    position: relative;
-    z-index: -1;
+    margin: -10em 0 0 0;
+    z-index: 0;
+}
+.banner{
+    max-width: 100%;
 }
 #portal-top #cpskin-banner{
     margin: 0 auto;
@@ -125,6 +128,9 @@ a.btn-search {
 [id="logo-mobile"]{
     display: none;
 }
+#mobnav-btn + #portal-searchbox {
+    display: none;
+}
 //Search in homepage
 .main-homepage #portal-searchbox {
     float: none;
@@ -145,6 +151,10 @@ a.btn-search {
 .LSBox::after{
     color: @theme-blue;
     font-size: 165%;
+}
+.main-homepage #LSResult{
+    right: 47.4%;
+    margin: -2em 0 0 -7em;
 }
 //Title
 #top-title-breadcrumbs {
@@ -174,6 +184,8 @@ a.btn-search {
 }
 #portal-globalnav{
     background: transparent;
+    position: relative;
+    z-index: 1;
 }
 #portal-globalnav ul {
     display: flex;
@@ -191,6 +203,9 @@ a.btn-search {
 }
 #portal-globalnav a:hover{
     background: @nav-color-active;
+}
+#visual-portal-wrapper a:focus {
+    outline: none;
 }
 #portal-globalnav li a {
     background-color: transparent;
@@ -211,28 +226,28 @@ a.btn-search {
     overflow: visible;
     width: auto;
 }
-#navWrapper #portal-globalnav #portaltab-je-suis a:hover,
-#navWrapper #portal-globalnav #portaltab-je-trouve a:hover,
-#navWrapper #portal-globalnav #portaltab-je-suis.selected a,
-#navWrapper #portal-globalnav #portaltab-je-trouve.selected a,
-#navWrapper #portal-globalnav #portaltab-je-suis a.activated,
-#navWrapper #portal-globalnav #portaltab-je-trouve a.activated {
-    background-color: transparent;
+#portal-globalnav #portaltab-je-suis a:hover,
+#portal-globalnav #portaltab-je-trouve a:hover,
+#portal-globalnav #portaltab-je-suis.selected a,
+#portal-globalnav #portaltab-je-trouve.selected a,
+#portal-globalnav #portaltab-je-suis a.activated,
+#portal-globalnav #portaltab-je-trouve a.activated {
+    background-color: @nav-color-active;
 }
-#navWrapper #portal-globalnav #portaltab-je-suis a,
-#navWrapper #portal-globalnav #portaltab-je-trouve a{
+#portal-globalnav #portaltab-je-suis a,
+#portal-globalnav #portaltab-je-trouve a{
     background: transparent;
     border: 1px solid #fff;
     border-radius: 4px;
 }
-#navWrapper #portal-globalnav #portaltab-je-trouve{
+#portal-globalnav #portaltab-je-trouve{
     flex: 0.5 1 auto;
 }
-#navWrapper #portal-globalnav #portaltab-je-suis{
+#portal-globalnav #portaltab-je-suis{
     flex: 1 1 auto;
 }
-#navWrapper #portal-globalnav #portaltab-je-trouve a,
-#navWrapper #portal-globalnav #portaltab-je-suis a{
+#portal-globalnav #portaltab-je-trouve a,
+#portal-globalnav #portaltab-je-suis a{
     margin: 3.2em 0  0 0;
 }
 //submenu
@@ -241,9 +256,10 @@ ul.navTreeLevel0{
     border-top: 0.6em solid @nav-color-active;
     padding: 0 0 2em 0;
     position: absolute;
-    right: 18%;
-    width: 100%;
+    right: 19%;
+    width: 64%;
     z-index: 3;
+    top:25%;
 }
 .sf-menu ul.navTreeLevel1,
 .sf-menu ul.navTreeLevel2,
@@ -255,6 +271,13 @@ ul.navTreeLevel0{
 }
 .sf-menu ul.direct_access{
     background: @nav-bg-sub-menu !important;
+}
+.portal-globalnav-cpskinmenu a:hover,
+.portal-globalnav-cpskinmenu-tabs a:hover,
+li.sfHover > span > a{
+    border-radius: 0px;
+    background-color: @nav-color-active;
+    color: @font-white;
 }
 //CONTENT
 #portal-columns{
@@ -748,6 +771,15 @@ ul.navTreeLevel0{
 .icon-sendtomanager::before {
     content: "\E839";
 }
+#right-actions-viewlet #other-actions #social-share::after{
+    background: @theme-blue;
+}
+#right-actions-viewlet-inner > a::after{
+    background: @theme-blue;
+    padding: 1em;
+    text-shadow: 0 0 0 @theme-blue ;
+    font-size: 100%;
+}
 //FOOTER
 #portal-footer-wrapper{
     margin: 3em 0 0 0;
@@ -921,19 +953,19 @@ body.template-facetednavigation_view .contact-entry{
 }
 .portaltype-directory a[title*="Madame"] .organization-title::before,
 .portaltype-directory a[title*="Monsieur"] .organization-title::before{
-    content: url("../images/personne-picto.png");
+    content: url("++theme++cpskin.diazotheme.memory/images/personne-picto.png");
     float: left;
     margin:  0 1em;
 }
 .template-facetednavigation_view .contact-entry:hover a[title*="Madame"] .organization-title::before,
 .template-facetednavigation_view .contact-entry:hover a[title*="Monsieur"] .organization-title::before{
-    content: url("../images/personne-picto-hover.png");
+    content: url("++theme++cpskin.diazotheme.memory/images/personne-picto-hover.png");
 }
 .template-facetednavigation_view .contact-entry:hover .organization-title::before {
-    content: url("../images/organization-picto-hover.png");
+    content: url("++theme++cpskin.diazotheme.memory/images/organization-picto-hover.png");
 }
 .portaltype-directory .organization-title::before {
-    content: url("../images/organization-picto.png");
+    content: url("++theme++cpskin.diazotheme.memory/images/organization-picto.png");
     float: left;
     margin: 0 1em;
 }
@@ -1079,3 +1111,76 @@ div.schedule-widget-day:nth-child(2n){
 .portaltype-reglement #content-core #formfield-form-widgets-reglement label{
     display: none;
 }
+//MINI SITE
+#minisite-globalnav .minisite-home{
+    display: none;
+}
+.minisite-nav-logo {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    flex-flow: row nowrap;
+    background: @theme-bg-header;
+}
+#minisite-logo {
+    float: none;
+    height: auto;
+    min-width: auto;
+    padding-left: 0;
+    position: static;
+    top: 0;
+    margin-left: 18%;
+    flex: 1 1 auto;
+}
+#container-minisite-globalnav {
+    max-width: 100%;
+    position: static;
+    width: auto;
+    z-index: 1;
+    padding: 0;
+    align-self: center;
+    flex: 1 1 auto;
+    flex-basis: 65%;
+}
+#minisite-globalnav{
+    background: transparent;
+}
+//in portal
+.in-minisite-in-portal{
+    //HEADER
+    #portal-header{
+        background: @nav-bg-in-mini-site;
+    }
+    #top-banner-search {
+        margin: 0;
+    }
+    #search-wrapper{
+        top: 8em;
+    }
+    #portal-logo > img{
+        border-radius: 50%;
+    }
+    //search
+    
+    //CONTENT
+    #portal-columns {
+        padding-top: 3em;
+    }
+}
+//out portal
+.in-minisite-out-portal{
+    //HEADER
+    #top-banner-search {
+        margin: 0em 0 0 0;
+        z-index: 0;
+    }
+    //CONTENT
+    #portal-columns {
+        padding-top: 3em;
+    }
+    
+}
+.in-minisite-out-portal.template-folderview #portal-columns {
+    padding-top: 7em;
+}
+

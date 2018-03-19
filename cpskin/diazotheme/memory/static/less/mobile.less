@@ -1,4 +1,9 @@
 //HEADER
+.in-minisite-in-portal #portal-header{
+    background: transparent;
+    display: flex;
+    flex-flow:column;
+}
 #portal-siteactions{
     padding: 1em 0 5em 0;
 }
@@ -29,8 +34,26 @@
 #search-wrapper{
     display: none;
 }
-//Title
-
+#portal-header #search-btn{
+    margin: 100% 2% 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.in-minisite-in-portal #portal-header #search-btn{
+    margin: 62% 2% 0 0;
+}
+#right-actions-viewlet{
+    top: 22em;
+}
+#top-title-breadcrumbs{
+    margin: 0 auto;
+}
+#portal-breadcrumbs{
+    background: @nav-bg-in-mini-site;
+    margin: 0;
+    padding: 1em 0;
+}
 //NAVIGATION
 #portal-header #navWrapper{
     display: inline-block !important;
@@ -40,15 +63,40 @@
     background: @theme-blue;
 }
 //submenu
-
+.minisite-nav-logo{
+    flex-flow: column;
+    order:1;
+}
 //CONTENT
 
 //HOMEPAGE
 .main-homepage #accueil {
     margin: 0;
 }
+.main-homepage #portal-searchbox {
+    background: @theme-blue;
+    margin: 53% 0 0 0%;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.main-homepage .LSBox #searchGadget {
+    width: 79%;
+}
+.main-homepage .LSBox::after {
+    content: " ";
+}
+.main-homepage #portal-columns{
+    position: relative;
+    z-index: 0;
+}
 //slider élément en évidence
 .element-en-evidence {
+    display: inline-block;
+    margin: 0 0 1em 0;
     width: 100%;
 }
 .element-en-evidence .pagecaption,
@@ -243,3 +291,11 @@
 //VUE AGENDA
 
 //REGLEMENT
+
+// MINI SITE
+//out portal
+.in-minisite-out-portal{
+    #search-wrapper {
+        display: block;
+    }
+}

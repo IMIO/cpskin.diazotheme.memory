@@ -14,6 +14,25 @@ $(document).ready(function() {
 
       event.preventDefault();
     });
+    if((window.innerWidth <=600)&&(hasClass(body,"main-homepage"))){
+      document.getElementById("#logo-mobile #portal-searchbox").style.display = "none";
+      $('#search-btn').click(function(e){
+           e.preventDefault();
+           $(this).toggleClass('selected');
+           document.getElementById("#logo-mobile #portal-searchbox").style.display = "block";
+          $('#logo-mobile #portal-searchbox input.searchField').focus();
+        });
+    }
+    if(window.innerWidth <=600){
+      document.getElementById("#portal-header #portal-searchbox").style.display = "none";
+      $('#search-btn').click(function(d){
+           d.preventDefault();
+           $(this).toggleClass('selected');
+           document.getElementById("#portal-header #portal-searchbox").style.display = "block";
+          $('#portal-header #portal-searchbox input.searchField').focus();
+        });
+    }
+
        
 
 });
