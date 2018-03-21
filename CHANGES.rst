@@ -1,11 +1,11 @@
 Changelog
 =========
 
-0.2.3 (unreleased)
+0.2.3 (2018-03-21)
 ------------------
 
-- Nothing changed yet.
-
+- Change css for directory and portlet.
+  [mgennart]
 
 0.2.2 (2018-03-19)
 ------------------

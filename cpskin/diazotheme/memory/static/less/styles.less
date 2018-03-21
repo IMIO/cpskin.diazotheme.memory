@@ -226,28 +226,28 @@ a.btn-search {
     overflow: visible;
     width: auto;
 }
-#portal-globalnav #portaltab-je-suis a:hover,
-#portal-globalnav #portaltab-je-trouve a:hover,
-#portal-globalnav #portaltab-je-suis.selected a,
-#portal-globalnav #portaltab-je-trouve.selected a,
-#portal-globalnav #portaltab-je-suis a.activated,
-#portal-globalnav #portaltab-je-trouve a.activated {
+#navWrapper #portal-globalnav #portaltab-je-suis a:hover,
+#navWrapper #portal-globalnav #portaltab-je-trouve a:hover,
+#navWrapper #portal-globalnav #portaltab-je-suis.selected a,
+#navWrapper #portal-globalnav #portaltab-je-trouve.selected a,
+#navWrapper #portal-globalnav #portaltab-je-suis a.activated,
+#navWrapper #portal-globalnav #portaltab-je-trouve a.activated {
     background-color: @nav-color-active;
 }
-#portal-globalnav #portaltab-je-suis a,
-#portal-globalnav #portaltab-je-trouve a{
+#navWrapper #portal-globalnav #portaltab-je-suis a,
+#navWrapper #portal-globalnav #portaltab-je-trouve a{
     background: transparent;
     border: 1px solid #fff;
     border-radius: 4px;
 }
-#portal-globalnav #portaltab-je-trouve{
+#navWrapper #portal-globalnav #portaltab-je-trouve{
     flex: 0.5 1 auto;
 }
-#portal-globalnav #portaltab-je-suis{
+#navWrapper #portal-globalnav #portaltab-je-suis{
     flex: 1 1 auto;
 }
-#portal-globalnav #portaltab-je-trouve a,
-#portal-globalnav #portaltab-je-suis a{
+#navWrapper #portal-globalnav #portaltab-je-trouve a,
+#navWrapper #portal-globalnav #portaltab-je-suis a{
     margin: 3.2em 0  0 0;
 }
 //submenu
@@ -281,7 +281,7 @@ li.sfHover > span > a{
 }
 //CONTENT
 #portal-columns{
-    padding-top: 1em;
+    padding-top: 2.5em;
 }
 //HOMEPAGE
 .main-homepage #accueil{
@@ -765,6 +765,9 @@ li.sfHover > span > a{
     text-align: right;
 }
 //site action
+#right-actions-viewlet{
+    top: 0;
+}
 #other-actions [class^="icon-"]::before{
     background: @theme-blue;
 }
@@ -780,6 +783,66 @@ li.sfHover > span > a{
     text-shadow: 0 0 0 @theme-blue ;
     font-size: 100%;
 }
+//PORTLET
+#portal-column-one .portletNavigationTree{
+    background: @theme-blue;
+    color:  @font-white;
+    
+    .portletHeader{
+        background: @theme-blue;
+        color: @font-white;
+        padding: 0.5em;
+    }
+    ul.navTreeLevel0{
+        background: #f3f3f3;
+        border: none;
+        box-sizing: border-box;
+        padding: 0;
+        position: static;
+        width: 100%;
+    }
+    ul.navTree .navTreeCurrentItem,
+    ul.navTree a:hover{
+        background: @theme-bg-document;
+        color: @theme-blue !important;
+    }
+    dd ul li a{
+        border: none;
+        padding: 1em 1.5em !important;
+        position: relative;
+    }
+    ul.navTree .navTreeCurrentItem::before{
+        content: "\e862";
+        font-family: fontello;
+        position: absolute;
+        left: 0.5em;
+    }
+    .navTree.navTreeLevel1 a:hover{
+        background: transparent;
+    }
+    .navTree.navTreeLevel1 a::before{
+        content: "\e863";
+        font-family: fontello;
+        left: 0.5em;
+        position: absolute;
+    }
+    .navTree.navTreeLevel1 a{
+        color: @theme-blue;
+        position: relative;
+    }
+
+}
+dl.portlet ul.navTreeLevel0 > .navTreeItem{
+    border-bottom: 4px solid #fff;
+}
+dl.portlet ul.navTreeLevel0 > .navTreeItem:last-child {
+    border: none;
+}
+.portletWrapper dl.portlet dt a{
+    background: @theme-blue;
+    color:  @font-white;
+}
+
 //FOOTER
 #portal-footer-wrapper{
     margin: 3em 0 0 0;
@@ -875,30 +938,41 @@ li.sfHover > span > a{
 .section-annuaire.portaltype-person #portal-columns {
     max-width: 1200px;
 }
+.portaltype-directory #portal-columns{
+    padding: 0;
+}
+.portaltype-directory #content {
+    margin: 0.1em 0 0em 0;
+}
 #top-area{
     background: #f3f3f3;
     padding: 2em 0 0 0;
 }
+.faceted-widget:first-child {
+    margin-left: 21.5em;
+}
 .faceted-drag-drop.faceted-widgets.faceted-default-widgets.faceted-top-widgets{
     padding-right: 0;
 }
-#faceted-form .select2-container .select2-choice{
+#visual-portal-wrapper #faceted-form .select2-container .select2-choice{
     background: transparent;
     border:none;
     border-bottom: 1px solid #1e2f3f;
     box-shadow: none;
 }
-.select2-container .select2-choice > .select2-chosen{
+#visual-portal-wrapper .select2-container .select2-choice > .select2-chosen{
     color: #1e2f3f;
+    font-weight: bold;
 }
 .faceted-text-widget.section-search{
     background: #1f313f;
     display: inline-block;
-    padding: 0 0 1em 0;
+    padding: 1.2em 0 1.2em 0;
     width: 58%;
 }
 #faceted-form .section-search fieldset{
     float: right;
+    margin-bottom: 0;
     margin-top: 1.5em;
     width: 40%;
 }
@@ -908,10 +982,12 @@ li.sfHover > span > a{
 }
 .faceted-widget.faceted-layout-widget.section-affichage{
     background: #1f313f;
-    padding: 0 1.1em 0.95em 0;
+    margin: 0;
+    padding: 2.55em 1.1em 2.5em 0;
     position: static;
-    width: 41%;
+    width: 42%;
 }
+
 .section-affichage .widget-fieldset ul li label{
     color: @font-white;
 }
@@ -920,11 +996,16 @@ li.sfHover > span > a{
     background: transparent;
     color: #67B1F5;
 }
+#content #top-area .faceted-widget.faceted-layout-widget.section-affichage ul li label{
+    background: transparent;
+    color: @font-white;
+}
 #content .faceted-widget.faceted-layout-widget.section-affichage li:first-child{
     border: none;
 }
 #content .faceted-widget.faceted-layout-widget.section-affichage li{
     border-left: 1px solid #5d6a73;
+    width: 44%;
 }
 #faceted-form .section-affichage fieldset{
     float: left;
@@ -990,9 +1071,12 @@ body.template-facetednavigation_view .contact-entry{
     color: #878787;
 }
 //vue fiche annuaire
+#visual-portal-wrapper .contact-details {
+    width: 50%;
+}
 #before-activity {
     background: @theme-bg-white;
-    border: 1em solid #f1f6fa;
+    border: 1em solid @theme-bg-document;
     box-sizing: border-box;
     display: inline-block;
     margin: 0 0 2em 0;
@@ -1014,6 +1098,13 @@ div.schedule-widget-day:nth-child(2n){
     font-size: 90%;
     float: none;
     padding: 0.5em 0 0.75em 0.8em;
+}
+#portal-columns .schedule-widget-day div{
+    padding: 0.5em 0 0 1em;
+}
+#aboveContentContact .coordinates{
+    background: @theme-bg-document;
+    margin: 0 0 2em 0;
 }
 //vue agenda
 .portaltype-collection .faceted-simpledate-widget{
@@ -1067,7 +1158,7 @@ div.schedule-widget-day:nth-child(2n){
 }
 //réglement
 .portaltype-reglement #content-core::before {
-    background: #EAF1F7;
+    background: @theme-bg-document;
     height: 95%;
     width: 99%;
     content: " ";
