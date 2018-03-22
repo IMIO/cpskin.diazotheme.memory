@@ -1,11 +1,11 @@
 Changelog
 =========
 
-0.2.4 (unreleased)
+0.2.4 (2018-03-22)
 ------------------
 
-- Nothing changed yet.
-
+- Change css for widget directory.
+  [mgennart]
 
 0.2.3 (2018-03-21)
 ------------------
