@@ -11,7 +11,12 @@
       <!-- Logo in navigation -->
     <after css:content-children=".theme3">
       <li id="portaltab-index_html">
-        <xsl:copy-of select= "//*[@id='portal-logo']"/>
+        <a id="portal-logo-desktop">
+            <xsl:attribute name="accesskey"><xsl:value-of select="//a[@id='portal-logo']/@accesskey" /></xsl:attribute>
+            <xsl:attribute name="href"><xsl:value-of select="//a[@id='portal-logo']/@href" /></xsl:attribute>
+            <xsl:attribute name="title"><xsl:value-of select="//a[@id='portal-logo']/@title" /></xsl:attribute>
+            <xsl:copy-of select="//*[@id='portal-logo']/*"/>
+        </a>
       </li>
     </after>
     <!-- Search in banner -->
@@ -63,7 +68,12 @@
     <after css:content="#top-menu-actions">
       <div id="logo-mobile">
         <div class="logo-mobile-inner">
-          <xsl:copy-of select= "//*[@id='portal-logo']"/>
+          <a id="portal-logo-mobile">
+            <xsl:attribute name="accesskey"><xsl:value-of select="//a[@id='portal-logo']/@accesskey" /></xsl:attribute>
+            <xsl:attribute name="href"><xsl:value-of select="//a[@id='portal-logo']/@href" /></xsl:attribute>
+            <xsl:attribute name="title"><xsl:value-of select="//a[@id='portal-logo']/@title" /></xsl:attribute>
+            <xsl:copy-of select="//*[@id='portal-logo']/*"/>
+          </a>
         </div>
       </div>
     </after>

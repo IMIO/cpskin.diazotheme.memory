@@ -4,7 +4,8 @@ Changelog
 0.2.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Don't use portal-logo id anymore, to avoid duplication by respond.js : #21021
+  [laulaz]
 
 
 0.2.4 (2018-03-22)
