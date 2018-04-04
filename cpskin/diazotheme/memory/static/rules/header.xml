@@ -20,13 +20,13 @@
       </li>
     </after>
     <!-- Search in banner -->
-    <after css:if-content=".main-homepage" css:content="#portal-globalnav">
+    <before css:if-content=".main-homepage" css:content="#search-btn">
       <div id="top-banner-search">
         <xsl:copy-of select="//*[@id='cpskin-banner']/img" />
         <xsl:copy-of select="//*[@id='portal-searchbox']"/>
       </div>
-    </after>
-    <after css:if-not-content=".main-homepage, in-minisite-in-portal" css:content="#portal-globalnav">
+    </before>
+    <before css:if-not-content=".main-homepage, .in-minisite-in-portal" css:content="#search-btn">
       <div id="top-banner-search">
         <xsl:copy-of select="//*[@id='cpskin-banner']/img" />
       </div>
@@ -34,15 +34,15 @@
         <xsl:copy-of select="//h1[1]" />
         <xsl:copy-of select="//*[@id='portal-breadcrumbs']" />
       </div>
-    </after>
+    </before>
     <!-- Standard search -->
-    <after css:if-not-content=".main-homepage" css:content="#portal-globalnav">
+    <after css:if-not-content=".main-homepage" css:content="#search-btn">
       <div id="search-wrapper">
-        <div id="btn-search">
-          <a href="#"  class="btn-search"></a>
-        </div>
         <div id="hidden-search" class="portal-search-hidden">
           <xsl:copy-of select="//*[@id='portal-searchbox']"/>
+        </div>
+        <div id="btn-search">
+          <a href="#"  class="btn-search"></a>
         </div>
       </div> 
     </after>
@@ -79,7 +79,7 @@
     </after>
     
     <!-- nav minisite -->
-    <after css:if-content="in-minisite-in-portal" css:content="#portal-globalnav">
+   <after css:if-content=".in-minisite-in-portal" css:content="#portal-globalnav">
       <div class="minisite-nav-logo">
         <xsl:copy-of select="//*[@id='minisite-logo']" />
         <xsl:copy-of select="//*[@id='container-minisite-globalnav']" />
@@ -105,7 +105,6 @@
     <drop css:content="#portal-breadcrumbs"/>
     <drop css:content="#container-minisite-globalnav"/>
     <drop css:content="#minisite-logo" />
-  
   </rules>
   
   

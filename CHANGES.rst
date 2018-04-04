@@ -1,13 +1,15 @@
 Changelog
 =========
 
-0.2.5 (unreleased)
+0.2.5 (2018-04-04)
 ------------------
 
 - Don't use portal-logo id anymore, to avoid duplication by respond.js : #21021
   [laulaz]
 
-
+- Change script for navigation to mini site and add css for mini site.
+  [mgennart]
+  
 0.2.4 (2018-03-22)
 ------------------
 

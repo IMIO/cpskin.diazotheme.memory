@@ -16,8 +16,10 @@
 }
 [id="logo-mobile"] {
     display: block;
-    background: #f3f3f3;
-    margin: -5em auto;
+    margin: -4em auto;
+    position: relative;
+    width: 70%;
+    z-index: 2;
 }
 .logo-mobile-inner {
     max-width: 60%;
@@ -35,7 +37,7 @@
     display: none;
 }
 #portal-header #search-btn{
-    margin: 100% 2% 0 0;
+    margin: 138% 2% 0 0;
     position: absolute;
     right: 0;
     top: 0;
@@ -44,15 +46,22 @@
     margin: 62% 2% 0 0;
 }
 #right-actions-viewlet{
-    top: 22em;
+    top: 30em;
 }
 #top-title-breadcrumbs{
     margin: 0 auto;
+    width: 100%;
 }
 #portal-breadcrumbs{
     background: @nav-bg-in-mini-site;
+    box-sizing: border-box;
     margin: 0;
-    padding: 1em 0;
+    max-width: 100%;
+    padding: 1em;
+    text-align: left;
+}
+#portal-breadcrumbs span {
+    display: inline-block;
 }
 //NAVIGATION
 #portal-header #navWrapper{
@@ -68,7 +77,10 @@
     order:1;
 }
 //CONTENT
-
+h1{
+    color: @font-black;
+    margin-top:0.5em;
+}
 //HOMEPAGE
 .main-homepage #accueil {
     margin: 0;
@@ -293,6 +305,14 @@
 //REGLEMENT
 
 // MINI SITE
+.nav-is-Substuck {
+    .minisite-nav-logo{
+        position: relative;
+    }
+    .in-minisite-in-portal .minisite-nav-logo{
+        top: 0x;
+    }
+}
 //out portal
 .in-minisite-out-portal{
     #search-wrapper {
