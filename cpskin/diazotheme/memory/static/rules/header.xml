@@ -93,7 +93,6 @@
       </div>
     </after>
   
-    
     <!-- DROP -->
     <drop css:content="#portaltab-index_html"/>
     <drop css:content="#cpskin-banner"/>

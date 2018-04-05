@@ -7,12 +7,15 @@
 $(document).ready(function() {
     var $window = $(window);
 // search
-    $( ".btn-search" ).click(function(event) {
+  if(window.innerWidth >= 600){
+     $( ".btn-search" ).click(function(event) {
     
       $("#hidden-search").toggleClass("portal-search-visible portal-search-hidden");
     
       event.preventDefault();
     });
+    }
+    
   var logo_url = $('#portal-logo-desktop img').attr('src');
 
   $(window).scroll(function(e) {

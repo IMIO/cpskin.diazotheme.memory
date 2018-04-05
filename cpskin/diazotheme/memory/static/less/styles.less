@@ -145,7 +145,7 @@ a.btn-search {
     display: none;
 }
 //Search in homepage
-.template-folderview #portal-searchbox {
+.main-homepage #portal-searchbox {
     float: none;
     margin: -24% 0 22% 31%;
     max-width: 35%;
@@ -153,19 +153,19 @@ a.btn-search {
     right: 0;
     top: 0;
 }
-.template-folderview .LSBox #searchGadget{
+.main-homepage .LSBox #searchGadget{
     width: 90%;
     height: 50px;
     padding-left: 1em;
 }
-.template-folderview .LSBox::after{
+.main-homepage .LSBox::after{
     content: "\e828";
 }
 .LSBox::after{
     color: @theme-blue;
     font-size: 165%;
 }
-.template-folderview #LSResult{
+.main-homepage #LSResult{
     right: 47.4%;
     margin: -2em 0 0 -7em;
 }
@@ -173,6 +173,7 @@ a.btn-search {
 #top-title-breadcrumbs {
     max-width: 1200px;
     margin: -6em auto 0 auto;
+    position: relative;
 }
 #portal-breadcrumbs{
     font-weight: bold;
@@ -251,14 +252,18 @@ a.btn-search {
 }
 #navWrapper #portal-globalnav #portaltab-je-suis a:hover,
 #navWrapper #portal-globalnav #portaltab-je-trouve a:hover,
-#navWrapper #portal-globalnav #portaltab-je-suis.selected a,
-#navWrapper #portal-globalnav #portaltab-je-trouve.selected a,
 #navWrapper #portal-globalnav #portaltab-je-suis a.activated,
 #navWrapper #portal-globalnav #portaltab-je-trouve a.activated,
+#navWrapper #portal-globalnav #portaltab-je-suis.selected a:hover,
+#navWrapper #portal-globalnav #portaltab-je-trouve.selected a:hover,
 #navWrapper #portal-globalnav .activated,
 #portal-globalnav .selected a:hover{
     background: rgba(0,0,0,0.25);
     border-radius: 5px;
+}
+#navWrapper #portal-globalnav #portaltab-je-suis.selected a,
+#navWrapper #portal-globalnav #portaltab-je-trouve.selected a{
+    background: transparent;
 }
 #navWrapper #portal-globalnav #portaltab-je-suis a,
 #navWrapper #portal-globalnav #portaltab-je-trouve a{
@@ -414,6 +419,9 @@ li.sfHover > span > a{
 #content .results ul li {
     position: relative;
 }
+#content .bloc-item{
+    margin: 1em 4% 1em 0;
+}
 //SLIDER
 .titre-slider {
     margin: 0 0 1.5em 0;
@@ -445,7 +453,7 @@ li.sfHover > span > a{
 .element-en-evidence .pageleadImage {
     background-size: cover;
     width: 100%;
-    padding-bottom: 68%;
+    padding-bottom: 68.5%;
 }
 .element-en-evidence .pagecaption{
     display: flex;
@@ -487,7 +495,7 @@ li.sfHover > span > a{
     background: linear-gradient(to right, #0055a5, rgba(0,85,165,0.3));
     box-sizing: border-box;
     height: 100%;
-    margin: -24.6em 0 0 0;
+    margin: -24.5em 0 0 0;
     padding: 2em 0 3em 0;
 }
 .element-en-evidence li.bloc-item:hover a h3,
@@ -550,7 +558,7 @@ li.sfHover > span > a{
     display: flex;
     flex-direction: column;
     height: 31.5%;
-    padding: 12% 0 0 0;
+    padding: 11% 0 0 0;
     transition: background 0.25s;
     width: 100%;
 }
@@ -607,7 +615,7 @@ li.sfHover > span > a{
     padding: 10px;
     text-align: center;
     font-size: 82%;
-    top:65%;
+    top:64%;
     line-height: 1.5em;
     font-weight: bold;
     left: 8%;
@@ -1154,8 +1162,13 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem:last-child {
     vertical-align: bottom;
     width: 48%;
 }
-.cc-cookies {
+body .cc-cookies {
     position: fixed !important;
+    width: 20em;
+    padding: 3%;
+    background: rgba(0,0,0,0.75);
+    right: 0;
+    left: auto;
 }
 .cc-cookies a.cc-cookie-accept,
 .cc-cookies-error a.cc-cookie-accept,
@@ -1164,15 +1177,66 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem:last-child {
 .cc-cookies a.cc-cookie-reset{
     margin: 1em auto 0 auto;
 }
-//Annuaire
+body .cc-cookies a, body .cc-cookies a:hover {
+    display: block;
+    padding: 0.5em;
+}
+//FACETED
 #visual-portal-wrapper #faceted-form .faceted-top-widgets {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    flex-grow: 1;
 }
-.portaltype-directory #visual-portal-wrapper #faceted-form .faceted-top-widgets {
-    justify-content: center;
+.faceted-widget{
+    flex-basis: 25%;
 }
+#faceted-form #top-area{
+    background: transparent;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.faceted-widget:first-child::before {
+    content: "";
+    background: #f2f2f2;
+    height: 300%;
+    width: 2000%;
+    position: absolute;
+    top: -40%;
+    z-index: -1;
+    left: -110%;
+}
+.faceted-widget:first-child {
+    margin-left: 0;
+    position: relative;
+}
+.faceted-text-widget.section-search::before {
+    content: "";
+    background: #1f313f;
+    height: 100%;
+    width: 1000%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: -100%;
+}
+.faceted-text-widget.section-search{
+    display: inline-block;
+    padding: 1.3em 0 1.5em 0;
+    position: relative;
+    flex-basis: 50%;
+}
+.portaltype-folder .faceted-text-widget.section-search{
+    flex-basis: 100%;
+}
+.faceted-widget.faceted-text-widget .widget-fieldset .searchButton{
+    padding:  1.1em 1em;
+}
+#top-area .faceted-simpledate-widget-form input,
+#top-area .faceted-daterange-widget-form input{
+    width: 6em;
+}
+//Annuaire
 .section-annuaire.portaltype-organization #portal-columns,
 .section-annuaire.portaltype-person #portal-columns {
     max-width: 1200px;
@@ -1200,30 +1264,24 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem:last-child {
     color: #1e2f3f;
     font-weight: bold;
 }
-.faceted-text-widget.section-search{
-    background: #1f313f;
-    display: inline-block;
-    padding: 1.3em 0 1.5em 0;
-    width: 58%;
-}
 #faceted-form .section-search fieldset{
-    float: right;
     margin-bottom: 0;
     margin-top: 1.5em;
-    width: 40%;
+    width: 34%;
+}
+.faceted-text-widget.section-search input.searchButton {
+    border: none !important
 }
 .section-search  .widget-fieldset input[type="text"]{
     border-radius: 4px;
     width: calc(404px);
 }
 .faceted-widget.faceted-layout-widget.section-affichage{
-    background: #1f313f;
     margin: 0;
     padding: 2.7em 1.1em 2.7em 0;
     position: static;
-    width: 42%;
+    flex-basis: 50%;
 }
-
 .section-affichage .widget-fieldset ul li label{
     color: @font-white;
 }
@@ -1246,16 +1304,31 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem:last-child {
 #faceted-form .section-affichage fieldset{
     float: left;
 }
-#top-area .faceted-widget.faceted-criteria-widget.section-filtres-actifs{
-    padding-bottom: 1em;
-}
 .template-facetednavigation_view #faceted-form .contact-entry:hover{
     background: #f1f6fa;
 }
-#top-area .faceted-widget.faceted-criteria-widget.section-filtres-actifs {
-    padding-bottom: 1em;
+.template-facetednavigation_view #right-actions-viewlet {
+    display: none;
+}
+.template-facetednavigation_view #portal-columns #portal-column-content {
+    padding-right: 0;
+}
+#top-area .faceted-widget.faceted-criteria-widget.section-filtres-actifs::after{
     background: #1F313F;
+    content: "";
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 200%;
+    left: -60%;
+    z-index: -1;
+}
+#top-area .faceted-widget.faceted-criteria-widget.section-filtres-actifs {
+    flex-basis: 100%;
+    padding-bottom: 1em;
+    padding-left: 0;
     margin: 0;
+    position: relative;
 }
 body.template-facetednavigation_view .organization-entry,
 body.template-facetednavigation_view .contact-entry{
@@ -1306,6 +1379,13 @@ body.template-facetednavigation_view .contact-entry{
 .portaltype-directory #content .contact-info a{
     color: #878787;
 }
+#content #top-area .widget-fieldset.faceted-criteria > legend,
+#content #top-area .widget-fieldset.faceted-criteria > dl{
+    color: @font-white;
+}
+.faceted-criteria a{
+    color: #67b1f5 !important;
+}
 //vue fiche annuaire
 #visual-portal-wrapper .contact-details {
     width: 50%;
@@ -1347,23 +1427,29 @@ div.schedule-widget-day:nth-child(2n){
     height: auto;
 }
 //vue agenda
-.portaltype-collection .faceted-simpledate-widget{
-    clear: left;
-    flex-basis: 25%;
-    margin-left: 1.2em;
+.portaltype-collection{
+    #content {
+        margin: 0.1em 0.25em 2em;
+    }
+    #portal-columns{
+        padding-top: 0;
+    }
+    
 }
-.portaltype-collection .faceted-text-widget.section-search{
-    clear: left;
-    width: 50%;
-}
-.portaltype-collection .faceted-widget.faceted-layout-widget.section-affichage {
-    width: 50%;
+.collection-event{
+    .faceted-widget {
+        flex-basis: 26%;
+    }
+    .faceted-daterange-widget{
+        flex-basis: 40%;
+    }
 }
 .faceted-agenda-ungrouped-view{
     width: 100%;
 }
 .faceted-agenda-ungrouped-view .event-entry{
     border: 1px solid #e6e6e6;
+    position: relative;
 }
 .event-entry{
     margin: 0 2em 2em 0;
@@ -1404,6 +1490,9 @@ div.schedule-widget-day:nth-child(2n){
     padding-top: 0.5em;
     position: relative;
     top:-26%;
+}
+.event-entry .indexview-categories{
+    bottom: 0;
 }
 //réglement
 .portaltype-reglement #content-core::before {

@@ -1,4 +1,7 @@
 //HEADER
+#portal-header{
+    display: block;
+}
 .in-minisite-in-portal #portal-header{
     background: transparent;
     display: flex;
@@ -29,18 +32,32 @@
     position: relative;
     z-index: 2;
 }
+//search
 #top-banner-search{
     margin: 0;
     z-index: 1;
 }
+.section-notheme #search-wrapper{
+    top: 28.8em;
+}
 #search-wrapper{
+    top: 29.1em;
+}
+#search-wrapper,
+#hidden-search{
+    width: 100%;
+}
+#search-wrapper #btn-search{
     display: none;
 }
-#portal-header #search-btn{
-    margin: 138% 2% 0 0;
-    position: absolute;
-    right: 0;
-    top: 0;
+.portal-search-hidden,
+.portal-search-hidden .LSBox #searchGadget{
+    width: 75%;
+    overflow: visible;
+}
+#portal-searchbox{
+    background: @theme-blue;
+    padding: 8em 0 8.5em 0;
 }
 .in-minisite-in-portal #portal-header #search-btn{
     margin: 62% 2% 0 0;
@@ -71,6 +88,9 @@
 .advb-submenu .advb-title{
     background: @theme-blue;
 }
+#mobnav-btn, .advb-submenu .advb-title{
+    border-radius: 0;
+}
 //submenu
 .minisite-nav-logo{
     flex-flow: column;
@@ -87,19 +107,25 @@ h1{
 }
 .main-homepage #portal-searchbox {
     background: @theme-blue;
-    margin: 53% 0 0 0%;
+    margin: 0 auto;
     max-width: 100%;
+    padding: 20% 0;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 30%;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
+}
+.main-homepage #portal-searchbox form,
+.main-homepage #searchGadget,
+.main-homepage .LSBox{
+    margin: 0 auto;
 }
 .main-homepage .LSBox #searchGadget {
     width: 79%;
 }
 .main-homepage .LSBox::after {
-    content: " ";
+    content: "\e83c";
 }
 .main-homepage #portal-columns{
     position: relative;

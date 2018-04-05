@@ -1,10 +1,11 @@
 Changelog
 =========
 
-0.2.6 (unreleased)
+0.2.6 (2018-04-05)
 ------------------
 
-- Nothing changed yet.
+- Change css for widget to faceted.
+  [mgennart]
 
 
 0.2.5 (2018-04-04)
