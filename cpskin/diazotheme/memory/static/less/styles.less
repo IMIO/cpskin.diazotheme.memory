@@ -48,7 +48,7 @@ h2{
     flex-flow: row nowrap;
 }
 #social-viewlet {
-    flex: 1 1 0;
+    flex: 1 1 auto;
 }
 #top-actions-inner a,
 #top-actions-inner li a:hover{
@@ -171,8 +171,7 @@ a.btn-search {
 }
 //Title
 #top-title-breadcrumbs {
-    max-width: 1200px;
-    margin: -6em auto 0 auto;
+    margin: -6.5% auto 0 auto;
     position: relative;
 }
 #portal-breadcrumbs{
@@ -394,6 +393,21 @@ li.sfHover > span > a{
 //CONTENT
 #portal-columns{
     padding-top: 2.5em;
+}
+.event.summary{
+    width: 50%;
+    word-wrap: break-word;
+}
+#content li.event_contacts::before {
+    content: "•";
+    position: absolute;
+    left: -1em;
+}
+#content li.event_contacts {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 //HOMEPAGE
 .template-folderview #accueil{
@@ -682,7 +696,7 @@ li.sfHover > span > a{
     color: #024387;
     content: "\e840";
     font-family: fontello;
-    font-size: 2em;
+    font-size: 35px;
 }
 .slider-multiple .flex-direction-nav a.flex-next::before {
     content: '\e83f';
@@ -810,7 +824,7 @@ li.sfHover > span > a{
     color: #024387;
     content: "\e840";
     font-family: fontello;
-    font-size: 1.5em;
+    font-size: 25px;
 }
 .slider-unique-titre .flex-direction-nav a.flex-next::before {
     content: '\e83f';
@@ -991,6 +1005,9 @@ li.sfHover > span > a{
     top:-3.5em;
 }
 //site action
+.nav-is-stuck #right-actions-viewlet-inner{
+    top: -10em;
+}
 #right-actions-viewlet{
     top: 0;
 }
@@ -1116,8 +1133,8 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem:last-child {
     padding:  0 0.8em 0 0;
 }
 .footer-static .footer-adresse a[href*="facebook"]{
-    margin-bottom: 1.5em;
-    padding: 4.5em 0 0 0;
+    margin: 1.5em 0;
+    padding: 0;
 }
 .footer-adresse a[href*="twitter"]::before{
     content: "\E80E";
@@ -1280,7 +1297,7 @@ body .cc-cookies a, body .cc-cookies a:hover {
     margin: 0;
     padding: 2.7em 1.1em 2.7em 0;
     position: static;
-    flex-basis: 50%;
+    flex-basis: 47%;
 }
 .section-affichage .widget-fieldset ul li label{
     color: @font-white;
@@ -1454,15 +1471,10 @@ div.schedule-widget-day:nth-child(2n){
 .event-entry{
     margin: 0 2em 2em 0;
 }
-.event-entry:hover a{
-    height: 80%;
-}
 .event-entry a {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding-bottom: 110%;
+    display: inline-block;
+    position: relative;
+    width: 100%;
 }
 .event-entry .indexview-categories,
 .event-entry .pagecaption,
@@ -1470,26 +1482,35 @@ div.schedule-widget-day:nth-child(2n){
     box-sizing: border-box;
     padding: 0 0.5em;
 }
-.event-entry .pageleadImage {
-    width: 100%;
-    padding-bottom: 200%;
+.event-entry:hover .pagecaption {
+    height: 340px;
+    margin-top: -74%;
 }
 .event-entry .pagecaption {
-    order: 2;
+    background: @theme-bg-white;
     box-sizing: border-box;
-    padding: 2em 1.5em 0 1.5em;
-    overflow: visible;
+    padding: 10% 1.5em 0 1.5em;
+    height: 150px;
 }
-.event-entry:hover a .documentByLine{
-    top: -95%;
+.event-entry:hover .documentByLine{
+    top: 8%;
 }
 .event-entry .documentByLine{
     color: @font-black;
-    font-size: 14px;
+    display: inline-block;
+    font-size: 100%;
     font-weight: bold;
     padding-top: 0.5em;
-    position: relative;
-    top:-26%;
+    position: absolute;
+    top: 54%;
+    width: 56%;
+    left: 6%;
+}
+.event-entry .day-month{
+    position: static;
+}
+.event-entry:hover .indexview-categories {
+    bottom: -0.15em;
 }
 .event-entry .indexview-categories{
     bottom: 0;

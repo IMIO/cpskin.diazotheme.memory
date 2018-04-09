@@ -62,9 +62,6 @@
 .in-minisite-in-portal #portal-header #search-btn{
     margin: 62% 2% 0 0;
 }
-#right-actions-viewlet{
-    top: 30em;
-}
 #top-title-breadcrumbs{
     margin: 0 auto;
     width: 100%;
@@ -88,18 +85,31 @@
 .advb-submenu .advb-title{
     background: @theme-blue;
 }
-#mobnav-btn, .advb-submenu .advb-title{
-    border-radius: 0;
-}
 //submenu
 .minisite-nav-logo{
     flex-flow: column;
     order:1;
 }
+#right-actions-viewlet-inner{
+    top: -1em;
+}
+#right-actions-viewlet{
+    right: -2.5em;
+}
 //CONTENT
 h1{
     color: @font-black;
     margin-top:0.5em;
+}
+#viewlet-above-content{
+    position: relative;
+}
+//event
+.event.summary{
+    float: none;
+}
+.event.summary{
+    width: 100%;
 }
 //HOMEPAGE
 .main-homepage #accueil {
@@ -153,9 +163,15 @@ h1{
 .element-en-evidence li.bloc-item .documentByLine{
     text-shadow: none;
 }
+.element-en-evidence .bloc-item:hover .pagecaption{
+    height: auto;
+}
 //événements
 .main-homepage .a-l-agenda {
     width: 100%;
+}
+#content .a-l-agenda .bloc-item{
+    margin-bottom: 3em;
 }
 //slider multiple
 #accueil #flex.slider-multiple .carousel .flex-viewport li {
@@ -256,7 +272,12 @@ h1{
     font-size: 115%;
 }
 //zone multimédia
-
+#content .multimedia .bloc-item:first-child {
+    margin-bottom: 2em;
+}
+#content .multimedia .bloc-item:last-child{
+    margin: 0;
+}
 //site action
 
 //FOOTER

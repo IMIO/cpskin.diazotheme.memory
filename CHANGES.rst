@@ -1,11 +1,11 @@
 Changelog
 =========
 
-0.2.7 (unreleased)
+0.2.7 (2018-04-09)
 ------------------
 
-- Nothing changed yet.
-
+- Correction of the css for ie.
+  [mgennart]
 
 0.2.6 (2018-04-05)
 ------------------
