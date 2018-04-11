@@ -147,11 +147,11 @@ a.btn-search {
 //Search in homepage
 .main-homepage #portal-searchbox {
     float: none;
-    margin: -24% 0 22% 31%;
-    max-width: 35%;
-    position: static;
-    right: 0;
-    top: 0;
+    max-width: 37%;
+    position: absolute;
+    left: 29%;
+    top: 39%;
+    z-index: 3;
 }
 .main-homepage .LSBox #searchGadget{
     width: 90%;
@@ -166,12 +166,12 @@ a.btn-search {
     font-size: 165%;
 }
 .main-homepage #LSResult{
-    right: 47.4%;
+    right: 41.4%;
     margin: -2em 0 0 -7em;
 }
 //Title
 #top-title-breadcrumbs {
-    margin: -6.5% auto 0 auto;
+    margin: -6.5em auto 0 auto;
     position: relative;
 }
 #portal-breadcrumbs{
@@ -411,7 +411,7 @@ li.sfHover > span > a{
 }
 //HOMEPAGE
 .template-folderview #accueil{
-    margin: -16em 0 0 0;
+    margin: -15em 0 0 0;
     position: relative;
     z-index: 2;
 }
@@ -780,7 +780,8 @@ li.sfHover > span > a{
     margin: auto;
     height: auto;
 }
-#visual-portal-wrapper #flex.slider-unique-titre .slider .flex-viewport .flex-caption {
+#visual-portal-wrapper #flex.slider-unique-titre .slider .flex-viewport .flex-caption,
+#visual-portal-wrapper #flex.slider-unique-titre .flex-caption{
     background-color: #ffffff;
     box-shadow: 5px 8px 9px 0 rgba(50,46,85,0.2);
     margin-bottom: 60px;
@@ -806,12 +807,16 @@ li.sfHover > span > a{
 #content #flex.slider-unique-titre .flexslider .read-next-link a{
     color: @font-black !important;
 }
-#visual-portal-wrapper #flex.slider-unique-titre .slider .flex-viewport li {
-    display: inline;
+#visual-portal-wrapper #flex.slider-unique-titre .slider .flex-viewport li,
+#visual-portal-wrapper #flex.slider-unique-titre li{
     min-height: 400px;
     position: relative;
 }
-#visual-portal-wrapper #flex.slider-unique-titre .slider .flex-viewport li .flex-caption a {
+#visual-portal-wrapper #flex.slider-unique-titre li{
+    display: block !important;
+}
+#visual-portal-wrapper #flex.slider-unique-titre .slider .flex-viewport li .flex-caption a,
+#visual-portal-wrapper #flex.slider-unique-titre li .flex-caption a{
     color: @font-black !important;
 }
 .slider-unique-titre .flex-direction-nav{
@@ -819,6 +824,9 @@ li.sfHover > span > a{
     float: left;
     justify-content: center;
     margin: -6em 0 0 4% !important;
+}
+#visual-portal-wrapper #flex.slider-unique-titre .flex-direction-nav li {
+    min-height: auto;
 }
 .slider-unique-titre .flex-direction-nav a::before{
     color: #024387;

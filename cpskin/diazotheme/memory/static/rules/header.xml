@@ -23,8 +23,8 @@
     <before css:if-content=".main-homepage" css:content="#search-btn">
       <div id="top-banner-search">
         <xsl:copy-of select="//*[@id='cpskin-banner']/img" />
-        <xsl:copy-of select="//*[@id='portal-searchbox']"/>
       </div>
+      <xsl:copy-of select="//*[@id='portal-searchbox']"/>
     </before>
     <before css:if-not-content=".main-homepage, .in-minisite-in-portal" css:content="#search-btn">
       <div id="top-banner-search">

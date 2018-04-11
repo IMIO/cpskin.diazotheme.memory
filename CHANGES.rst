@@ -1,11 +1,11 @@
 Changelog
 =========
 
-0.2.8 (unreleased)
+0.2.8 (2018-04-11)
 ------------------
 
-- Nothing changed yet.
-
+- Correction of the css for live search and slider.
+  [mgennart]
 
 0.2.7 (2018-04-09)
 ------------------
