@@ -30,22 +30,12 @@
       <div id="top-banner-search">
         <xsl:copy-of select="//*[@id='cpskin-banner']/img" />
       </div>
+      <xsl:copy-of select="//*[@id='portal-searchbox']"/>
       <div id="top-title-breadcrumbs">
         <xsl:copy-of select="//h1[1]" />
         <xsl:copy-of select="//*[@id='portal-breadcrumbs']" />
       </div>
     </before>
-    <!-- Standard search -->
-    <after css:if-not-content=".main-homepage" css:content="#search-btn">
-      <div id="search-wrapper">
-        <div id="hidden-search" class="portal-search-hidden">
-          <xsl:copy-of select="//*[@id='portal-searchbox']"/>
-        </div>
-        <div id="btn-search">
-          <a href="#"  class="btn-search"></a>
-        </div>
-      </div> 
-    </after>
     
     <!-- Action header -->
     <before css:content="#portal-header p:first-of-type">

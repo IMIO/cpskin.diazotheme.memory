@@ -94,43 +94,13 @@ h2{
     height: 4em;
     padding-left: 1.25em;
 }
-#btn-search{
-    float: right;
-}
-.btn-search::before {
-    content: "\e828";
-    font-family: "fontello";
-    font-size: 125%;
-}
-a.btn-search {
-    background: rgba(0,85,165,0.7);
-    border-radius: 4px 0 0 4px;
-    color: #fff;
-    padding: 1.5em;
-}
-#portal-searchbox{
-    margin: 0;
-    position: relative;
+#portal-searchbox {
     float: none;
-    right: 0;
-    top:-1px;
-}
-.portal-search-hidden,
-.portal-search-hidden .LSBox #searchGadget{
-    width: 0;
-    overflow: hidden;
-}
-.portal-search-visible{
-    overflow: visible;
-    width: 80%;
-    transition: 1s ease;
-}
-.portal-search-visible .LSBox #searchGadget{
-    overflow: visible;
-    transition: 1s ease;
-}
-.LSBox::after {
-    content: "\e83c";
+    max-width: 37%;
+    position: absolute;
+    left: 29%;
+    top: 39%;
+    z-index: 3;
 }
 .LSBox input[type="text"]{
     background: #fff;
@@ -144,28 +114,16 @@ a.btn-search {
 #mobnav-btn + #portal-searchbox {
     display: none;
 }
-//Search in homepage
-.main-homepage #portal-searchbox {
-    float: none;
-    max-width: 37%;
-    position: absolute;
-    left: 29%;
-    top: 39%;
-    z-index: 3;
-}
-.main-homepage .LSBox #searchGadget{
+.LSBox #searchGadget{
     width: 90%;
     height: 50px;
     padding-left: 1em;
-}
-.main-homepage .LSBox::after{
-    content: "\e828";
 }
 .LSBox::after{
     color: @theme-blue;
     font-size: 165%;
 }
-.main-homepage #LSResult{
+#LSResult{
     right: 41.4%;
     margin: -2em 0 0 -7em;
 }
@@ -290,7 +248,7 @@ ul.navTreeLevel0{
     padding: 1em 0 2em 0;
     position: absolute;
     width: 100%;
-    z-index: 3;
+    z-index: 4;
 }
 .sf-menu ul.navTreeLevel1,
 .sf-menu ul.navTreeLevel2,

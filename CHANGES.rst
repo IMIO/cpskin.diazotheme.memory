@@ -1,10 +1,11 @@
 Changelog
 =========
 
-0.2.9 (unreleased)
+0.2.9 (2018-04-12)
 ------------------
 
-- Nothing changed yet.
+- Change rules and css for search.
+  [mgennart]
 
 
 0.2.8 (2018-04-11)
