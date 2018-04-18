@@ -26,7 +26,7 @@
       </div>
       <xsl:copy-of select="//*[@id='portal-searchbox']"/>
     </before>
-    <before css:if-not-content=".main-homepage, .in-minisite-in-portal" css:content="#search-btn">
+    <before css:if-not-content=".main-homepage" css:content="#search-btn">
       <div id="top-banner-search">
         <xsl:copy-of select="//*[@id='cpskin-banner']/img" />
       </div>
@@ -71,15 +71,10 @@
     <!-- nav minisite -->
    <after css:if-content=".in-minisite-in-portal" css:content="#portal-globalnav">
       <div class="minisite-nav-logo">
-        <xsl:copy-of select="//*[@id='minisite-logo']" />
-        <xsl:copy-of select="//*[@id='container-minisite-globalnav']" />
-      </div>
-      <div id="top-banner-search">
-        <xsl:copy-of select="//*[@id='cpskin-banner']/img" />
-      </div>
-      <div id="top-title-breadcrumbs">
-        <xsl:copy-of select="//h1[1]" />
-        <xsl:copy-of select="//*[@id='portal-breadcrumbs']" />
+        <div class="minisite-nav-logo-inner">
+          <xsl:copy-of select="//*[@id='minisite-logo']" />
+          <xsl:copy-of select="//*[@id='container-minisite-globalnav']" />
+        </div>
       </div>
     </after>
   
@@ -100,16 +95,10 @@
   <rules if="$isinminisitemode">
     <after css:content="#top-menu-actions">
       <div class="minisite-nav-logo">
-        <xsl:copy-of select="//*[@id='minisite-logo']" />
-        <xsl:copy-of select="//*[@id='container-minisite-globalnav']" />
-        <div id="search-wrapper">
-          <div id="btn-search">
-            <a href="#"  class="btn-search"></a>
-          </div>
-          <div id="hidden-search" class="portal-search-hidden">
-            <xsl:copy-of select="//*[@id='portal-searchbox']"/>
-          </div>
-        </div> 
+        <div class="minisite-nav-logo-inner">
+          <xsl:copy-of select="//*[@id='minisite-logo']" />
+          <xsl:copy-of select="//*[@id='container-minisite-globalnav']" />
+        </div>
       </div>
       <div id="top-banner-search">
         <xsl:copy-of select="//*[@id='cpskin-banner']/img" />

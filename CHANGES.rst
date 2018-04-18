@@ -1,10 +1,11 @@
 Changelog
 =========
 
-0.2.10 (unreleased)
+0.2.10 (2018-04-18)
 -------------------
 
-- Nothing changed yet.
+- Css fix for mini site navigation.
+  [mgennart]
 
 
 0.2.9 (2018-04-12)

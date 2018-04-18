@@ -2,11 +2,6 @@
 #portal-header{
     display: block;
 }
-.in-minisite-in-portal #portal-header{
-    background: transparent;
-    display: flex;
-    flex-flow:column;
-}
 #portal-siteactions{
     padding: 1em 0 5em 0;
 }
@@ -59,9 +54,6 @@
     background: @theme-blue;
     padding: 8em 0 8.5em 0;
 }
-.in-minisite-in-portal #portal-header #search-btn{
-    margin: 62% 2% 0 0;
-}
 #top-title-breadcrumbs{
     margin: 0 auto;
     width: 100%;
@@ -86,10 +78,6 @@
     background: @theme-blue;
 }
 //submenu
-.minisite-nav-logo{
-    flex-flow: column;
-    order:1;
-}
 #right-actions-viewlet-inner{
     top: -1em;
 }
@@ -368,9 +356,38 @@ h1{
         top: 0x;
     }
 }
+.minisite-nav-logo-inner{
+    display: block;
+}
+#minisite-logo{
+    display: block;
+    min-width: 100%;
+}
+#minisite-globalnav{
+    padding: 1em;
+}
+#minisite-globalnav li {
+    display: list-item;
+}
+//in portal
+.in-minisite-in-portal{
+    #portal-header{
+        min-height: 795px;
+    }
+    .minisite-nav-logo {
+        position: absolute;
+        bottom: -6%;
+        width: 100%;
+        height: 40%;
+    }
+}
 //out portal
 .in-minisite-out-portal{
     #search-wrapper {
         display: block;
     }
+    #advanced-breadcrumbs{
+        display: none;
+    }
+    
 }
