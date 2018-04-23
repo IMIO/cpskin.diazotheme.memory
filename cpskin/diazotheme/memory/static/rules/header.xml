@@ -71,9 +71,10 @@
     <!-- nav minisite -->
    <after css:if-content=".in-minisite-in-portal" css:content="#portal-globalnav">
       <div class="minisite-nav-logo">
+        <xsl:copy-of select="//*[@id='minisite-actions']" />
         <div class="minisite-nav-logo-inner">
           <xsl:copy-of select="//*[@id='minisite-logo']" />
-          <xsl:copy-of select="//*[@id='container-minisite-globalnav']" />
+          <xsl:copy-of select="//*[@id='minisite-globalnav']" />
         </div>
       </div>
     </after>
@@ -89,20 +90,23 @@
     <drop css:content="#portal-breadcrumbs"/>
     <drop css:content="#container-minisite-globalnav"/>
     <drop css:content="#minisite-logo" />
+    <drop css:content="#container-minisite-globalnav" />
   </rules>
   
   
   <rules if="$isinminisitemode">
     <after css:content="#top-menu-actions">
       <div class="minisite-nav-logo">
+        <xsl:copy-of select="//*[@id='minisite-actions']" />
         <div class="minisite-nav-logo-inner">
           <xsl:copy-of select="//*[@id='minisite-logo']" />
-          <xsl:copy-of select="//*[@id='container-minisite-globalnav']" />
+          <xsl:copy-of select="//*[@id='minisite-globalnav']" />
         </div>
       </div>
       <div id="top-banner-search">
         <xsl:copy-of select="//*[@id='cpskin-banner']/img" />
       </div>
+      <xsl:copy-of select="//*[@id='portal-searchbox']"/>
       <div id="top-title-breadcrumbs">
         <xsl:copy-of select="//h1[1]" />
       </div>

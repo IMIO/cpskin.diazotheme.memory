@@ -64,6 +64,9 @@ h2{
 #top-actions #portal-personaltools a {
     color: #cb0034;
 }
+#top-banner-search::after{
+    display: none;
+}
 #top-banner-search {
     margin: -10em 0 0 0;
     z-index: 0;
@@ -341,8 +344,14 @@ li.sfHover > span > a{
         width: 100%;
         z-index: 2;
     }
-    .in-minisite-in-portal .minisite-nav-logo{
+    .in-minisite-in-portal{
+        .minisite-nav-logo{
         top: 85px;
+        }
+        #minisite-actions {
+        position: relative;
+        top: 10px;
+        }
     }
     .in-minisite-out-portal .minisite-nav-logo{
         top: 0;
@@ -1537,7 +1546,7 @@ div.schedule-widget-day:nth-child(2n){
 #minisite-logo {
     display: table-cell;
     float: none;
-    min-width: 5%;
+    width: 10%;
     padding-left: 0;
     position: static;
     top: 0;
@@ -1545,14 +1554,15 @@ div.schedule-widget-day:nth-child(2n){
 .minisite-nav-logo-inner{
     display: table;
     margin: 0 auto;
+    width: 100%;
     max-width: 1200px;
 }
-#container-minisite-globalnav {
+#minisite-globalnav {
     display: table-cell;
     position: static;
     padding: 0;
     vertical-align: middle;
-    width: 29%;
+    width: 90%;
 }
 #minisite-globalnav{
     background: transparent;
@@ -1563,13 +1573,25 @@ div.schedule-widget-day:nth-child(2n){
 #minisite-actions {
     box-sizing: border-box;
     font-size: 85%;
-    padding: 0.5em 4em 0 0;
+}
+#minisite-actions ul {
+    background: @theme-blue;
+    border-radius: 0 0 4px 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    float: none;
+    padding: 0.5% 1%;
+}
+#minisite-actions a {
+    color: @font-white;
 }
 //in portal
 .in-minisite-in-portal{
     //HEADER
     #portal-header #navWrapper{
         background: @nav-bg-in-mini-site;
+        margin-top: -0.5em;
+        z-index: 5;
     }
     #portal-globalnav{
         padding: 0 0 0.5em 7em;
@@ -1589,6 +1611,9 @@ div.schedule-widget-day:nth-child(2n){
     #portal-globalnav a:hover{
         background: rgba(255, 255, 255, 0.3);
     }
+    ul.navTreeLevel0 {
+        top: 10em;
+    }
     #portal-logo-desktop img {
         width: 100%;
         margin: 1em 0 0 0;
@@ -1601,10 +1626,17 @@ div.schedule-widget-day:nth-child(2n){
     #search-wrapper{
         top: 18em;
     }
+    #portal-searchbox{
+        top: 60%;
+    }
     //CONTENT
     #portal-columns {
         padding-top: 3em;
-    }   
+    }
+    //HOMEPAGE
+    &&.template-folderview #accueil{
+       margin: 0;
+    }
 }
 //out portal
 .in-minisite-out-portal{
@@ -1616,9 +1648,16 @@ div.schedule-widget-day:nth-child(2n){
     #portal-header #search-btn{
         display: none;
     }
+    #portal-searchbox{
+       top:60%;
+    }
     //CONTENT
     #portal-columns {
         padding-top: 3em;
+    }
+    //HOMEPAGE
+    &&.template-folderview #accueil{
+       margin: 0;
     }
     
 }

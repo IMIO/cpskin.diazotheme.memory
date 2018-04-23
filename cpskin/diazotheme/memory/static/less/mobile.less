@@ -54,7 +54,7 @@
     background: @theme-blue;
     padding: 8em 0 8.5em 0;
 }
-#top-title-breadcrumbs{
+#visual-portal-wrapper #top-title-breadcrumbs{
     margin: 0 auto;
     width: 100%;
 }
@@ -163,7 +163,7 @@ h1{
     height: auto;
 }
 //événements
-.main-homepage .a-l-agenda {
+.template-folderview .a-l-agenda {
     width: 100%;
 }
 #content .a-l-agenda .bloc-item{
@@ -291,6 +291,10 @@ h1{
     order:1;
     width: 100%
 }
+.footer-adresse,
+.footer-service {
+    flex: none;
+}
 //ANNUAIRE
 .faceted-text-widget.section-search{
     float: none;
@@ -372,13 +376,14 @@ h1{
 //in portal
 .in-minisite-in-portal{
     #portal-header{
-        min-height: 795px;
+        min-height: 650px;
     }
     .minisite-nav-logo {
         position: absolute;
-        bottom: -6%;
+        bottom: 0;
         width: 100%;
         height: 40%;
+        z-index: -1;
     }
 }
 //out portal
