@@ -1,10 +1,11 @@
 Changelog
 =========
 
-0.2.12 (unreleased)
+0.2.12 (2018-05-09)
 -------------------
 
-- Nothing changed yet.
+- Change rules and css for footer to mini site mode.
+  [mgennart]
 
 
 0.2.11 (2018-04-23)
