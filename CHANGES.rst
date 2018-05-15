@@ -1,10 +1,11 @@
 Changelog
 =========
 
-0.2.13 (unreleased)
+0.2.13 (2018-05-15)
 -------------------
 
-- Nothing changed yet.
+- Change class .element-en-evidence for .a-la-une.element-en-evidence.
+  [mgennart]
 
 
 0.2.12 (2018-05-09)
