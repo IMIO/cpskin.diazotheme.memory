@@ -4,7 +4,8 @@ Changelog
 0.2.14 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix incomplete uninstall profile
+  [laulaz]
 
 
 0.2.13 (2018-05-15)

@@ -9,4 +9,12 @@
     id="++theme++cpskin.diazotheme.memory/less/styles.less"
     remove="True" />
 
+ <stylesheet title="cpskin.diazotheme.memory LESS Mobile Styles"
+    id="++theme++cpskin.diazotheme.memory/less/mobile.less"
+    remove="True" />
+
+ <stylesheet title="cpskin.diazotheme.memory LESS Large Mobile Styles"
+    id="++theme++cpskin.diazotheme.memory/less/mobilelarge.less"
+    remove="True" />
+
 </object>
