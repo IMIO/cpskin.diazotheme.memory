@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.14 (unreleased)
+0.2.14 (2019-01-08)
 -------------------
 
 - Add class for collapsable minisite menu and adaption of the css for slider with control paging
