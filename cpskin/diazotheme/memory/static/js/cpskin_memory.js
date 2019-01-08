@@ -4,7 +4,7 @@
  *
  * Distributed under terms of the LICENCE.txt license.
  */
-$(document).ready(function() {
+$(document).ready (function() {
     var $window = $(window);
 // search
   if(window.innerWidth >= 600){
@@ -52,12 +52,12 @@ $(document).ready(function() {
       
     }
   });
- 
   // logo in mini site
   if ($('body').hasClass('in-minisite-in-portal')){
       base_url = logo_url.split('cpskinlogo.png')[0]
       sticky_logo_url = base_url + 'cpskinlogo-sticky.png';
       $('#portal-logo-desktop img').attr('src', sticky_logo_url);
+      $('#navWrapper').addClass('minisite-collapsable');
     }
 });
 

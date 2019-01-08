@@ -38,7 +38,7 @@
     </before>
     
     <!-- Action header -->
-    <before css:content="#portal-header p:first-of-type">
+    <before css:if-not-content=".in-minisite-in-portal" css:content="#portal-header p:first-of-type">
       <div id="top-languages">
         <xsl:copy-of select="//*[@id='portal-languageselector']" />
       </div>
@@ -125,5 +125,25 @@
   <drop css:content="#portal-searchbox"/>
   <drop css:content="#portal-logo"/>
   <drop content="//h1[1]"/>
+  
+  <rules >
+    <before css:if-content=".in-minisite-in-portal" css:content="#portal-header p:first-of-type">
+      <div id="top-languages">
+        <xsl:copy-of select="//*[@id='portal-languageselector']" />
+      </div>
+      <div class="minisite-collapsable">
+        <div id="top-actions">
+          <div id="top-actions-inner">
+            <div id="top-actions-actions">
+              <xsl:copy-of select="//*[@id='social-viewlet']" />
+              <xsl:copy-of select="//*[@id='portal-siteactions']" />
+              <xsl:copy-of select="//*[@id='top-menu-actions']" />
+              <xsl:copy-of select="//*[@id='portal-personaltools-wrapper']" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </before>
+  </rules>
 
 </rules>

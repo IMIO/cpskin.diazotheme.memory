@@ -4,6 +4,9 @@ Changelog
 0.2.14 (unreleased)
 -------------------
 
+- Add class for collapsable minisite menu and adaption of the css for slider with control paging
+  [mgennart]
+  
 - Fix incomplete uninstall profile
   [laulaz]
 

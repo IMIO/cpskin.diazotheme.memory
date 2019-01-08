@@ -779,7 +779,7 @@ li.sfHover > span > a{
     min-height: 400px;
     position: relative;
 }
-#visual-portal-wrapper #flex.slider-unique-titre li{
+#visual-portal-wrapper #flex.slider-unique-titre .flex-direction-nav li{
     display: block !important;
 }
 #visual-portal-wrapper #flex.slider-unique-titre .slider .flex-viewport li .flex-caption a,
@@ -790,7 +790,7 @@ li.sfHover > span > a{
     display: flex;
     float: left;
     justify-content: center;
-    margin: -6em 0 0 4% !important;
+    margin: -8.5em 0 0 4% !important;
 }
 #visual-portal-wrapper #flex.slider-unique-titre .flex-direction-nav li {
     min-height: auto;
@@ -819,6 +819,17 @@ li.sfHover > span > a{
     left: 0;
     opacity: 1 !important;
 }
+.flex-control-paging li a {
+    background: rgba(45,99,161,0.5);
+    :hover{
+        background: rgba(45,99,161,0.7);
+    }
+    &.flex-active {
+
+    background: rgba(45,99,161,0.9);
+    }
+}
+
 //publications
 .les-publications::before{
     background: #1F313F;
