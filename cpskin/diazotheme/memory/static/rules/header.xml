@@ -75,6 +75,7 @@
         <div class="minisite-nav-logo-inner">
           <xsl:copy-of select="//*[@id='minisite-logo']" />
           <xsl:copy-of select="//*[@id='minisite-globalnav']" />
+          <xsl:copy-of select="//*[@class='minisite-dropdown-menu']" />
         </div>
       </div>
     </after>
@@ -91,6 +92,7 @@
     <drop css:content="#container-minisite-globalnav"/>
     <drop css:content="#minisite-logo" />
     <drop css:content="#container-minisite-globalnav" />
+    <drop css:content=".minisite-dropdown-menu-container" />
   </rules>
   
   
@@ -101,6 +103,7 @@
         <div class="minisite-nav-logo-inner">
           <xsl:copy-of select="//*[@id='minisite-logo']" />
           <xsl:copy-of select="//*[@id='minisite-globalnav']" />
+          <xsl:copy-of select="//*[@class='minisite-dropdown-menu']" />
         </div>
       </div>
       <div id="top-banner-search">
@@ -120,6 +123,7 @@
     <drop css:content="#viewlet-above-content #viewlet-minisite"/>
     <drop css:content="#search-btn" />
     <drop css:content="#mobnav-btn" />
+    <drop css:content=".minisite-dropdown-menu-container" />
   </rules>
   
   <drop css:content="#portal-searchbox"/>

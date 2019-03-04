@@ -1548,8 +1548,11 @@ div.schedule-widget-day:nth-child(2n){
     display: none;
 }
 //MINI SITE
-#minisite-globalnav .minisite-home{
-    display: none;
+#minisite-globalnav .minisite-home,
+.minisite-dropdown-menu {
+    .minisite-home{
+        display: none;
+    }
 }
 .minisite-nav-logo {
     background: @theme-bg-header;
@@ -1568,18 +1571,35 @@ div.schedule-widget-day:nth-child(2n){
     width: 100%;
     max-width: 1200px;
 }
+.minisite-dropdown-menu,
 #minisite-globalnav {
+    background: transparent;
     display: table-cell;
     position: static;
     padding: 0;
     vertical-align: middle;
     width: 90%;
+    a{
+        font-size: 110%;
+    }
 }
-#minisite-globalnav{
+.minisite-dropdown-menu{
+    > ul.navTreeLevel0{
+        position: static;
+    }
+    ul.navTreeLevel0 li a,
+    ul.navTreeLevel1 li a,
+    ul.navTreeLevel2 li a{
+        border: none;
+    }
+    > ul > li > ul{
+        left: 20%;
+    }
+}
+#minisite-globalnav {
     background: transparent;
-}
-#minisite-globalnav a{
-    font-size: 110%;
+    display: table-cell;
+    position: static;
 }
 #minisite-actions {
     box-sizing: border-box;
