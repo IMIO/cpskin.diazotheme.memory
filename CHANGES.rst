@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.16 (unreleased)
+0.2.16 (2020-08-24)
 -------------------
 
 - WEB-3411: Color correction for better accessibility
