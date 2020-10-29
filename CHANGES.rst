@@ -11,7 +11,7 @@ Changelog
 -------------------
 
 - WEB-3411: Color correction for better accessibility
-[thomlamb]
+  [thomlamb]
 
 
 0.2.15 (2019-03-04)
