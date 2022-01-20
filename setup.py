@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Installer for the cpskin.diazotheme.memory package."""
 
-version = '0.2.18.dev0'
+version = '0.2.18'
 
 from setuptools import find_packages
 from setuptools import setup
