@@ -98,9 +98,6 @@
   
   <rules if="$isinminisitemode">
     <after css:content="#top-menu-actions">
-
-      <xsl:copy-of select="//div[@id='gdpr-consent-banner']" />
-
       <div class="minisite-nav-logo">
         <xsl:copy-of select="//*[@id='minisite-actions']" />
         <div class="minisite-nav-logo-inner">
